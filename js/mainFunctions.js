@@ -14,14 +14,14 @@ function buildNavbar(){
 
   const navbar = `
   <div class="container-fluid">
-    <a class="navbar-brand" href="./home.html"><img src="./images/logoAsset 2@100x.png" style="width: 66px"></img></a>
+    <a class="navbar-brand" href="./index.html"><img src="./images/logoAsset 2@100x.png" style="width: 66px"></img></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link default-font-size" href="./home.html"> <svg  xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 50 50">
+          <a class="nav-link default-font-size" href="./index.html"> <svg  xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 50 50">
           <path d="M 24.962891 1.0546875 A 1.0001 1.0001 0 0 0 24.384766 1.2636719 L 1.3847656 19.210938 A 1.0005659 1.0005659 0 0 0 2.6152344 20.789062 L 4 19.708984 L 4 46 A 1.0001 1.0001 0 0 0 5 47 L 18.832031 47 A 1.0001 1.0001 0 0 0 19.158203 47 L 30.832031 47 A 1.0001 1.0001 0 0 0 31.158203 47 L 45 47 A 1.0001 1.0001 0 0 0 46 46 L 46 19.708984 L 47.384766 20.789062 A 1.0005657 1.0005657 0 1 0 48.615234 19.210938 L 41 13.269531 L 41 6 L 35 6 L 35 8.5859375 L 25.615234 1.2636719 A 1.0001 1.0001 0 0 0 24.962891 1.0546875 z M 25 3.3222656 L 44 18.148438 L 44 45 L 32 45 L 32 26 L 18 26 L 18 45 L 6 45 L 6 18.148438 L 25 3.3222656 z M 37 8 L 39 8 L 39 11.708984 L 37 10.146484 L 37 8 z M 20 28 L 30 28 L 30 45 L 20 45 L 20 28 z"></path>
           </svg> Home</a>
         </li>
@@ -273,7 +273,7 @@ function login(){
       setTimeout(async ()=>{
         const bsAlert = new bootstrap.Alert('#myAlert')
         bsAlert.close()
-        window.location="./home.html"
+        window.location="./index.html"
         await updateNavbar()
       },1000)
     })
@@ -352,7 +352,7 @@ async function logout(){
   setTimeout(async ()=>{
     const bsAlert = new bootstrap.Alert('#myAlert')
     bsAlert.close()
-    window.location="./home.html"
+    window.location="./index.html"
     await updateNavbar()
   },1000)
 }
@@ -391,7 +391,7 @@ function addPost(){
       setTimeout(()=>{
         const bsAlert = new bootstrap.Alert('#myAlert')
         bsAlert.close()
-        window.location="./home.html"
+        window.location="./index.html"
       },1000)
     })
     .catch(error=>{
@@ -469,7 +469,7 @@ function deletePost(postId){
          getUserPosts()
        }
        else if(params.get("postId")!=null){
-         window.location="./home.html"
+         window.location="./index.html"
        }
       }else if(params.size==0){
       await getPosts(true,1)
