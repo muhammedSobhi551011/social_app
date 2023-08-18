@@ -1,0 +1,317 @@
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+.loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #0d6efd;
+    width: 16px;
+    height: 16px;
+    transform: translate(-50%, 50%);
+    border-radius: 50%;
+}
+    
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.profile-image-container{
+    width: 5vw;
+    height: 5vw;
+}
+#current-user-image{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#search-btn:hover{
+    width: 33px;
+    height: 33px;
+}
+body{
+    background-image: linear-gradient(to right bottom,  #d5dded,#43688d);
+    margin-bottom: 5px;
+}
+#add-post-icon{
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    left: 4%;
+    width: 50px;
+    height: 50px;
+    padding:6px;
+    border-radius:15px;
+    bottom: 5%;
+    z-index: 999999;
+    fill: #ffffff;
+    background-color:#0d6efd;
+    opacity: 0.60;
+    transition: opacity 0.35s;
+}
+#add-post-icon:hover{
+    opacity: 1;
+}
+#loading-icon{
+    z-index: 99999;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #212529;
+    display: flex;
+    border-radius: 50%;
+    padding: 7px;
+    opacity: 0.75;
+}
+#profile-image{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#users-container{
+    overflow: auto;
+}
+#alerts-container{
+    z-index: 999999;
+    position: fixed;
+    bottom: 7%;
+    right: 3%;
+}
+@media (min-width: 0) and (max-width: 359px) {
+    .default-font-size{
+        font-size: 0.6em !important;
+    }
+    .created-at{
+        font-size: 0.4em;
+        font-weight: bold;
+    }
+    .poster-image{
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    #posts-container{
+        width: calc(100% - 50px);
+    }
+    #posts-container input::placeholder{
+        font-size: 0.6em;
+    }
+    #add-post-icon{
+        width: 35px;
+        height: 35px;
+        border-radius:8px;
+        padding:3px;
+    }
+    #profile-image{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    #details-card{
+        padding: 2rem;
+        width: 250px;
+    }
+    .counts{
+        font-size: 1.2rem;
+    }
+    #users-container{
+        width: calc(100% - 75px);
+        height: calc(100vh - 120px);
+    }
+}
+@media (min-width: 360px) and (max-width: 414px) {
+    .default-font-size{
+        font-size: 0.7em !important;
+    }
+    .created-at{
+        font-size: 0.5em;
+        font-weight: bold;
+    }
+    .poster-image{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    #posts-container{
+        width: calc(100% - 50px);
+    }
+    #posts-container input::placeholder{
+        font-size: 0.7em;
+    }
+    #add-post-icon{
+        width: 38px;
+        height: 38px;
+        border-radius:10px;
+        padding:4px;
+    }
+    #profile-image{
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    #details-card{
+        padding: 2rem;
+        width: 300px;
+    }
+    .counts{
+        font-size: 1.8rem;
+    }
+    #users-container{
+        width: calc(100% - 75px);
+        height: calc(100vh - 130px);
+    }
+}
+@media (min-width: 415px) and (max-width: 600px) {
+    
+    .default-font-size{
+        font-size: 0.9em !important;
+    }
+    .created-at{
+        font-size: 0.7em !important;
+        font-weight: bold !important;
+    }
+    .poster-image{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    #posts-container{
+        width: calc(100% - 100px);
+    }
+    #posts-container input::placeholder{
+        font-size: 0.9em;
+    }
+    #add-post-icon{
+        width: 45px;
+        height: 45px;
+        border-radius:15px;
+        padding:5px;
+    }
+    #profile-image{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    #details-card{
+        padding: 2rem;
+        width: 350px;
+    }
+    .counts{
+        font-size: 2.2rem;
+    }
+    #users-container{
+        width: calc(100% - 75px);
+        height: calc(100vh - 140px);
+    }
+}
+@media (min-width: 601px) and (max-width: 1280px) {
+    .default-font-size{
+        font-size: 0.9em !important;
+    }
+    .created-at{
+        font-size: 0.7em !important;
+        font-weight: bold !important;
+    }
+    .poster-image{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    #posts-container{
+        width: calc(100% - 200px);
+    }
+    #posts-container input::placeholder{
+        font-size: 0.9em;
+    }
+    #add-post-icon{
+        width: 52px;
+        height: 52px;
+        border-radius:15px;
+        padding:5px;
+    }
+    #profile-image{
+        width: 125px;
+        height: 125px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    #details-card{
+        padding: 2rem;
+        width: 450px;
+    }
+    .counts{
+        font-size: 3rem;
+    }
+    #users-container{
+        width: calc(100% - 100px);
+        height: calc(100vh - 155px);
+    }
+}
+@media (min-width: 1281px) and (max-width: 1920px) {
+    .default-font-size{
+        font-size: 1rem !important;
+    }
+    .created-at{
+        font-size: 0.7rem !important;
+        font-weight: bold !important;
+    }
+    .poster-image{
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    #posts-container{
+        width: calc(100% - 300px);
+    }
+    #posts-container input::placeholder{
+        font-size: 1.2em;
+    }
+    #add-post-icon{
+        width: 55px;
+        height: 55px;
+        border-radius:15px;
+        padding:5px;
+    }
+    #profile-image{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    #details-card{
+        padding: 4.5rem;
+        width: 90%;
+    }
+    #users-container{
+        width: calc(100% - 200px);
+        height: calc(100vh - 155px);
+    }
+}
+.user:hover{
+    background-color: #d6d6d6;
+    color: #212529;
+}

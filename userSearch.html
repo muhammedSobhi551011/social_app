@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+<body class="bg-dark d-flex flex-column align-items-center row-gap-4 ">
+  <nav class="navbar navbar-expand-lg bg-body-secondary  mt-3 rounded-4" style="width:80%">
+    
+  </nav>
+  <div id ="users-container" class="default-font-size bg-body rounded-4 p-3 d-flex flex-column row-gap-3" style="box-shadow: 1px 1px 9px black;">
+    
+  </div>
+  <!-- MODALS -->
+  <!-- MODAL -->
+  <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modal-title">Modal title</h1>
+          <button type="button" class="btn-close" id="modal-close-btn" onclick="closeModal()"></button>
+        </div>
+        <div class="modal-body">
+          <form class="row">
+            <div class="col-4">
+              <label for="exampleInputEmail1" class="form-label">Username</label>
+              <input type="text" class="form-control" id="username-signup" aria-describedby="emailHelp">
+            </div>
+            <div class="col-8">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password-signup">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick="login()" id="modal-submit-btn">Signup</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END MODAL -->
+  <!-- END MODALS -->
+  <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg id="add-post-icon" onclick="updateModal(this)" enable-background="new 0 0 512 512" height="512px" id="Layer_1" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M256,512C114.625,512,0,397.391,0,256C0,114.609,114.625,0,256,0c141.391,0,256,114.609,256,256  C512,397.391,397.391,512,256,512z M256,64C149.969,64,64,149.969,64,256s85.969,192,192,192c106.047,0,192-85.969,192-192  S362.047,64,256,64z M288,384h-64v-96h-96v-64h96v-96h64v96h96v64h-96V384z"/></svg>
+  <div id="loading-icon" class="d-none">
+    <span class="loader" ></span>
+  </div>
+  <div id="alerts-container"></div>
+</body>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./js/mainFunctions.js"></script>
+<script src="./js/userSearch.js"></script>
+<script>
+  buildNavbar()
+  updateNavbar()
+  search()
+</script>
+</html>
