@@ -43,8 +43,12 @@
     width: 33px;
     height: 33px;
 }
-body{
+html{
+    min-height: 100%;
     background-image: linear-gradient(to right bottom,  #d5dded,#43688d);
+}
+body{
+    background-color: transparent;
     margin-bottom: 5px;
 }
 #add-post-icon{
