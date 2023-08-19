@@ -15,14 +15,13 @@ async function getPost(){
         const postUserImg=typeof post.author.profile_image==="object"? ("./images/abstract-user-flat-1.svg"):(post.author.profile_image)
         const postUsername=post.author.username
         const postCreatedAt=post.created_at
-        const postTitle=post.title || ""
         const postImg=typeof post.image==="object"? (""):(`<img src=${post.image} class="img-fluid">`)
         const postBody=post.body
         const commentsCounts=post.comments_count
         const addCommentForm =`
             <form class="d-flex flex-row m-2 column-gap-2">
             <div class="w-100">
-                <input type="text" class="form-control form-control-sm default-font-size" id="add-comment${postId}" placeholder="Add comment...">
+            <input onkeypress="enter(event,${postId})" type="text" class="form-control form-control-sm default-font-size" id="add-comment${postId}" placeholder="Add comment...">
             </div>
             <div>
             <svg class="bg-primary rounded-2" onclick="addComment(${postId},false)" style="cursor: pointer;width: 21px;height: 22px;" xmlns="http://www.w3.org/2000/svg" id="add" x="0" y="0" version="1.1" viewBox="0 0 29 29" xml:space="preserve"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M14.5 22V7M7 14.5h15"></path></svg>

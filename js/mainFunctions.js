@@ -703,7 +703,7 @@ function unLoggedUserAlert(){
     const bsAlert = new bootstrap.Alert('#myAlert')
     bsAlert.close()
   },3000)
-}
+} 
 // ALERTS
 const alertPlaceholder = document.getElementById('alerts-container')
 const appendAlert = (message, type) => {
@@ -719,4 +719,11 @@ const appendAlert = (message, type) => {
 }
 // END ALERTS
 
+function enter(e,postId){
+  
+  if(e.key==="Enter"){
+    e.preventDefault()
+    addComment(postId,true)
+  }
+}
 // END HELPER FUNCTIONS
