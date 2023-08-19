@@ -15,7 +15,7 @@ async function search(){
         users = JSON.parse(localStorage.getItem("users"))
     }
     const filteredUsers = users.filter((user)=>{
-        return user.username.toLowerCase().includes(searchBar.value)
+        return user.username.toLowerCase().includes(searchBar.value.toLowerCase())
     })
     for (const user of filteredUsers){
         const userImage = typeof user.profile_image=="object"?("./images/abstract-user-flat-1.svg"):(user.profile_image)
