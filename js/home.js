@@ -24,7 +24,7 @@ async function getPosts(update,counter){
       const postUserImg=typeof post.author.profile_image==="object"? ("./images/abstract-user-flat-1.svg"):(post.author.profile_image)
       const postUsername=post.author.username
       const postCreatedAt=post.created_at
-      const postImg=typeof post.image==="object"? (""):(`<img src=${post.image} class="img-fluid">`)
+      const postImg=typeof post.image==="object"? (""):(`<img src=${post.image} class="img-fluid" style="max-height: 400px">`)
       const postBody=post.body
       const commentsCounts=post.comments_count
       const addCommentForm =`
